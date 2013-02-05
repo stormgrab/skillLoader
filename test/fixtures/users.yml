@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  password: MyString
+  verified: 1
+  dob: 2013-01-29
+  dp_url: MyString
+  exp: 1
+  level: 1
+
+two:
+  email: MyString
+  password: MyString
+  verified: 1
+  dob: 2013-01-29
+  dp_url: MyString
+  exp: 1
+  level: 1

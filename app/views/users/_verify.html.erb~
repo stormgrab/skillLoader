@@ -1,0 +1,16 @@
+<h2>Login</h2>
+
+<%= form_for(@user) do |f| %>
+  <div class="login">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+  <div class="login">
+    <%= f.label :password %><br />
+    <%= f.password_field :new_password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

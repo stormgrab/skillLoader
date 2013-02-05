@@ -1,0 +1,53 @@
+<style>
+.signup_container{
+	border-right:1px solid #dddddd;
+	padding-right: 2%;
+	}
+.signup, .login{
+width:90%;
+
+}
+
+
+.login_container{
+	border-left:1px solid #dddddd;
+	padding-left: 2%;
+}
+
+input#user_terms_of_service{
+	display: inline;
+}
+
+</style>
+<div class="row-fluid">
+<div class="span12">
+<div class="span3 signup_container">
+<div id="signup_div" class="signup pull-right">
+	<%= render 'users/new' %>
+</div>
+
+</div>
+<div class="span6">
+<div id="video">
+	<div>
+	<video width="320" height="240">
+		 <source src="/lol.mp4" type="video/mp4">
+		  
+		  Your browser does not support the video tag.
+	</video>
+	</div>
+</div>
+
+</div>
+<div class="span3 login_container">
+<div id="login_div" class="login">
+	<%= render 'sessions/new' %>			
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skillloader</title>
+  
+  <link href="/assets/bootstrap.min.css"  rel="stylesheet" type="text/css" />
+  <%= javascript_include_tag "application" %>
+	<%= javascript_tag('jQuery.noConflict();') -%>
+	<%= include_tiny_mce_if_needed %>
+  <%= csrf_meta_tags %>
+<style>
+body{
+margin-left:1%;
+margin-right:1%;
+}
+.main_nav{
+font-size:15px;
+}
+.hero-unit{
+padding-bottom:1%;
+padding-top:1%;
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="row-fluid" id="default_main" >
+<div class="span12" id="default_main_header">
+<div class="temp">
+<div class="hero-unit span12">
+  <div class="span2">
+  <h2>SkillLoader</h2>
+  <p>
+    <a class="btn btn-primary btn-success">
+      Info>>
+    </a>
+  </p>
+</div>
+<div class="span6 offset2">
+<br/><br/>
+<blockquote>
+  <p>skillLoader is the shiniest new place to learn, test and play with new skills</p>
+  <small>Pranav kumar <cite title="Source Title"><i>TechCrunch, </i> April 2013</cite></small>
+</blockquote></div>
+</div>
+</div>
+<ul class="nav nav-tabs main_nav">
+  <li class="active">
+    <a href="#">Home</a>
+  </li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Game</a></li>
+</ul>
+</div>
+</div>
+
+<%= yield %>
+</body>
+</html>

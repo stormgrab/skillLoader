@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<link href="/stylesheets/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen"/>
+		<link href="/stylesheets/bootstrap/css/bootstrap.min.responsive.css" type="text/css" rel="stylesheet" media="screen"/>
+		<link href="/stylesheets/index.css" type="text/css" rel="stylesheet" media="screen"/>
+		
+	</head>
+	<body>
+		<div class="row-fluid" id="default_main" >		
+			<h1><p class="text-info">Skilloader</p></h1>
+			<hr/>			
+						
+			<div id="signupdiv" class="signup">
+				
+				<%= render template: '/users/new' %>
+				
+			</div>
+			<div id="video" class="span5">
+				<div>
+				<video width="320" height="240">
+					 <source src="/home/pranav/lol.mp4" type="video/mp4">
+					  
+					  Your browser does not support the video tag.
+				</video>
+			</div>
+			</div>
+			<div id="login" class="span3">
+				<h2>Log In </h2>				
+				
+			</div>
+			
+			
+		</div>
+	</body>
+</html>	
