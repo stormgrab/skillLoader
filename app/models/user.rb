@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 	has_many :posts 
 	has_many :comments
-
+	
 	validates :email, uniqueness: {case_sensitive: false}	, presence: true
 	validates :terms_of_service, acceptance: true
 	validates :new_password, confirmation: true, if: :password_changed?

@@ -22,7 +22,7 @@ end
 
 gem 'jquery-rails'
 gem "bcrypt-ruby", :require => "bcrypt"
-gem 'tiny_mce'
+gem "tinymce-rails"
 gem 'therubyracer'
 
 # To use ActiveModel has_secure_password

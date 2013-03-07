@@ -4,4 +4,12 @@ class Comment < ActiveRecord::Base
 	belongs_to :post
 	belongs_to :user
 
+	accepts_nested_attributes_for :post
+
+	after_save :achievement
+
+	def achievement
+		noOfComments=self.Count(post_id: self.post_id)
+
+	end
 end
