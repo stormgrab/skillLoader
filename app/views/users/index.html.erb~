@@ -1,5 +1,11 @@
 <h1>Listing users</h1>
 
+<% session[:user_id].badges.each do |badge| %>
+	<%= badge.name %>
+
+<% end %>
+
+
 <table>
   <tr>
     <th>Email</th>
@@ -30,5 +36,5 @@
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path %> |
 <%= link_to 'Landing Page', landing_path %>

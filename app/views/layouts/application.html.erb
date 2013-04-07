@@ -4,7 +4,7 @@
   <title>Skillloader</title>
   
   <link href="/assets/bootstrap.min.css"  rel="stylesheet" type="text/css" />
- 	<%= csrf_meta_tags %>
+	<%= csrf_meta_tags %>
 <style>
 body{
 margin-left:1%;
@@ -14,8 +14,9 @@ margin-right:1%;
 font-size:15px;
 }
 .hero-unit{
-padding-bottom:1%;
-padding-top:1%;
+	padding-top: 0.05%;
+	padding-bottom: 0.05%;
+	
 }
 </style>
 
@@ -24,35 +25,49 @@ padding-top:1%;
 
 <body>
 <div class="row-fluid" id="default_main" >
-<div class="span12" id="default_main_header">
-<div class="temp">
-<div class="hero-unit span12">
-  <div class="span2">
-  <h2>SkillLoader</h2>
-  <p>
-    <a class="btn btn-primary btn-success">
-      Info>>
-    </a>
-  </p>
-</div>
-<div class="span6 offset2">
-<br/><br/>
-<blockquote>
-  <p>skillLoader is the shiniest new place to learn, test and play with new skills</p>
-  <small>Pranav kumar <cite title="Source Title"><i>TechCrunch, </i> April 2013</cite></small>
-</blockquote></div>
-</div>
-</div>
-<ul class="nav nav-tabs main_nav">
-  <li class="active">
-    <a href="#">Home</a>
-  </li>
-  <li><a href="#">Profile</a></li>
-  <li><a href="#">Game</a></li>
-</ul>
-</div>
+	<div class="span12" id="default_main_header row-fluid">
+		<div id="banner">
+			<div class="hero-unit span12">
+				<div class="span2">
+					<h2>SkillLoader</h2>
+					<a class="btn btn-primary btn-success">
+					Info>>
+					</a>
+				</div>
+
+				<div class="span6 offset2">
+					<br/><br/>
+					<blockquote>
+					<p>SkillLoader is the shiniest new place to learn, test and play with new skills</p>
+					<small>Deepak Pai <cite title="Source Title"><i>TechCrunch, </i> April 2013</cite></small>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+	    <div class="navbar">
+		    <div class="navbar-inner">
+			    <a class="brand" href="#">Skillloader</a>
+			    <ul class="nav">
+				    <li><a href="#">Home</a></li>
+				    <li><a href="#">Profile</a></li>
+				    <li><a href="#">Settings</a></li>
+
+			    </ul>
+
+	    	<div class="pull-right">
+		    	<% if user=User.find(session[:user_id]) %>
+		    		<%= user.email %>
+		    	<%end%>
+	        </div>
+		    </div>
+	    </div>
+		
+	</div>
+
+	<%= yield %>
 </div>
 
-<%= yield %>
+
 </body>
 </html>

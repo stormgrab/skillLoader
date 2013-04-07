@@ -1,0 +1,6 @@
+class Achievement < ActiveRecord::Base
+  attr_accessible :code, :desc, :name, :pic
+
+	has_many :aquired_achievements
+	has_many :users,through:aquired_achievements
+end

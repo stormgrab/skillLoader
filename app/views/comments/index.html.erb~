@@ -13,7 +13,7 @@
 	<% user = User.find(comment.user_id) %>
   <tr>
     <td><%= comment.content %></td>
-    <td><%= link_to user.email, user_path(@user) %></td>
+    <td><%= link_to user.email, user_path(user) %></td>
     <td><%= link_to 'Edit', edit_post_comment_path(@post,comment) %></td>
     <td><%= link_to 'Destroy', post_comment_path(@post,comment) , method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

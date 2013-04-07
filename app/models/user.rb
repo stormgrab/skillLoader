@@ -1,6 +1,8 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  has_merit
+
 	include BCrypt
   
 	attr_accessible :dob, :dp_url, :email, :password, :terms_of_service, 
@@ -35,5 +37,6 @@ class User < ActiveRecord::Base
     end
     return nil
   end
-  
+ 
+
 end

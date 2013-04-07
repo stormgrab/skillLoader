@@ -6,10 +6,11 @@ class Comment < ActiveRecord::Base
 
 	accepts_nested_attributes_for :post
 
-	after_save :achievement
+	after_save :updatePost
 
-	def achievement
-		noOfComments=self.Count(post_id: self.post_id)
-
+	def updatePost
+		post=Post.find(self.post_id)
+		post.noOfComments=post.comments.count
+		post.save
 	end
 end

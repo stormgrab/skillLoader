@@ -1,44 +1,33 @@
 <%= tinymce_assets %>
-<script type="text/javascript" src="/assets/tinymce.js">
-</script>
+<script type="text/javascript" src="/assets/tinymce.js"></script>
 <style>
 .main{
-background-color:black;
-color:white;
 }
 .edit_field{
-width:100%;
+	width:100%;
 }
 .sidebar_left{
-background-color:black;
-color:white;
 }
 .prof_pic_holder{
-margin-left:1%;
+	margin-left:1%;
 }
-.field{
+.title_field{
+	width:100%;
+}
+.default_label{
 
+  font-size: 16pt;
+}
+.default_label_strong{
+
+  font-size: 18pt;
+  font-weight: bold;
 }
 </style>
 
 <div class="row-fluid main">
 <div class="span12">
-<div class="span3 sidebar_left">
-<ul class="thumbnails">
-  <li class="prof_pic_holder">
-    <a href="#" class="thumbnail">
-      <img src="/download.jpg" alt="">
-    
-</a>
-<h3  class="text-info">Ariana S. Somechick</h3>
-<dl class="dl-vertical pull-right">
-<dt>Active Since</dt>
-<dd>July, 2013</dd>
-</dl>
-  </li>
-  
-</ul>
-</div>
+
   
 <div class="field span6">
 
@@ -54,15 +43,23 @@ margin-left:1%;
       </ul>
     
   <% end %>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+
+  <%= f.label :"New Post", class:"default_label_strong"%>
+	<br />   <br />
+    
+  <%= f.label :title, class:"default_label"%><br />
+  <%= f.text_field :title, class: "title_field" %>
+  <br/>	<br/>
+
   <div class="field">
-    <%= f.label :content %><br />
+    <%= f.label :content, class:"default_label" %><br />
     <%= f.text_area :content,class:'text-info edit_field tinymce',rows:10 %>
 		<%= tinymce %>
   </div>
+
   <div class="actions">
-    
+  <br>
+  <br>  
 	<%= f.submit class:"btn btn-info" %>
   </div>
 </div>
