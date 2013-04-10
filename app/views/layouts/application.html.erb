@@ -56,7 +56,8 @@ font-size:15px;
 			    </ul>
 
 	    	<div class="pull-right">
-		    	<% if user=User.find(session[:user_id]) %>
+		    	<% if session[:user_id] %>
+						<% user=User.find(session[:user_id]) %>
 		    		<%= user.email %>
 		    	<%end%>
 	        </div>
